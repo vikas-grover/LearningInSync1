@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>HTML Frames Example - Top Nav</title>
+<SCRIPT language="JavaScript">
+<!--hide
+function changemenu(TableNameSelected)
+{
+switch(TableNameSelected)
+{
+    case 'Content':
+ 	parent.menu.location="../SideMenu/Content.html";
+	parent.content.location="../Content/Content/stat.php";
+		break; 
+	case 'User':
+ 	parent.menu.location="../SideMenu/User.html";
+	parent.content.location="../Content/Content/stat.php";
+  break; 
+  default:
+}
+}
+
+//-->
+</SCRIPT>
+<style type="text/css">
+	a:link {color:#FFFFFF;}    /* unvisited link */
+	a:visited {color:#00FF00;} /* visited link */
+	a:hover {color:#00FFFF;}   /* mouse over link */
+	a:active {color:#0000FF;}  /* selected link */
+body {
+	font-family:verdana,arial,sans-serif;
+	font-size:10pt;
+	margin:10px;
+	background-color:#00AAAA;
+	}
+</style>
+</head>
+
+<body>
+<h3>Welcome to PHP MySQL</h3>
+<p><a href="javascript:changemenu('Content')" target="menu">Contents</a>| <a href="javascript:changemenu('User')" target="menu">Manage Users</a></p>
+</body>
+</html>
