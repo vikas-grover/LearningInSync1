@@ -1,0 +1,18 @@
+#outer {padding:2px 0; border:1px solid #a50; border-color:#a50 #fa5 #610 #fa5; background:#f2a057 url(grad.gif) repeat-x bottom left; margin:50px 0 100px 0;}
+#point {display:table; padding:0; margin:0 auto; list-style:none; white-space:nowrap;}
+#point li {display:table-cell; margin:0; padding:0;}
+#point li a {}
+#point li a:hover, #point li a.current {}
+#point li a:hover b, #point li a.current b {} 
+
+a:link,a:visited
+{
+float:left; font-family:arial; font-size:0.8em; height:3.1em; line-height:3.1em; letter-spacing:1px; padding:0 1em; text-decoration:none; color:#fff; background:#f2a057 url(grad.gif) repeat-x bottom left; border-right:1px solid #d60; border-left:1px solid #fb6;
+}
+a:hover,a:active
+{
+background:#e93 url(down_arrow.gif) no-repeat center top; color:#fff;
+}
+a:active {
+display:block; float:left; background:#d2691e url(up_arrow.gif) no-repeat center bottom; cursor:pointer
+}

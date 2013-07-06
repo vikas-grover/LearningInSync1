@@ -3,6 +3,8 @@
 <html>
 <head>
 <title>HTML Frames Example - Top Nav</title>
+<link rel="stylesheet" type="text/css" href="../CSS/Button2.css">
+<link rel="stylesheet" type="text/css" href="../CSS/Body.css">
 <SCRIPT language="JavaScript">
 <!--hide
 function changemenu(TableNameSelected)
@@ -72,25 +74,12 @@ case 'Region':
 
 //-->
 </SCRIPT>
-
-<style type="text/css">
-	a:link {color:#FFFFFF;}    /* unvisited link */
-	a:visited {color:#00FF00;} /* visited link */
-	a:hover {color:#00FFFF;}   /* mouse over link */
-	a:active {color:#0000FF;}  /* selected link */
-body {
-	font-family:verdana,arial,sans-serif;
-	font-size:10pt;
-	margin:10px;
-	background-color:#00AAAA;
-	}
-</style>
 </head>
 
 <body>
 <h3>Welcome to PHP MySQL, <?php echo $_SESSION['authenticated']; ?></h3>
-<p><a href="javascript:changemenu('Student')" target="menu">Students</a> | <a href="javascript:changemenu('Teacher')" target="menu">Teachers</a>
-| <a href="javascript:changemenu('Country')" target="menu">Countries</a>|<a href="javascript:changemenu('City')" target="menu">Cities</a>| <a href="javascript:changemenu('Region')" target="menu">Regions</a>
-| <a href="javascript:changemenu('School')" target="menu">Schools</a>| <a href="javascript:changemenu('Subject')" target="menu">Subjects</a>|<a href="javascript:changemenu('Enrollment')" target="menu">Enrollments</a>| <a href="javascript:changemenu('Grade')" target="menu">Grades</a>| <a href="javascript:changemenu('Term')" target="menu">Terms</a>| <a href="javascript:changemenu('Report')" target="menu">Reports</a>| <a href="javascript:changemenu('Content')" target="menu">Contents</a>| <a href="javascript:changemenu('User')" target="menu">Manage Users</a>| <a href="javascript:changemenu('LogOff')" target="menu">Log Out</a></p>
+<p><a href="javascript:changemenu('Student')" target="menu">Students</a> <a href="javascript:changemenu('Teacher')" target="menu">Teachers</a>
+ <a href="javascript:changemenu('Country')" target="menu">Countries</a> <a href="javascript:changemenu('City')" target="menu">Cities</a> <a href="javascript:changemenu('Region')" target="menu">Regions</a>
+ <a href="javascript:changemenu('School')" target="menu">Schools</a> <a href="javascript:changemenu('Subject')" target="menu">Subjects</a> <a href="javascript:changemenu('Enrollment')" target="menu">Enrollments</a> <a href="javascript:changemenu('Grade')" target="menu">Grades</a> <a href="javascript:changemenu('Term')" target="menu">Terms</a> <a href="javascript:changemenu('Report')" target="menu">Reports</a> <a href="javascript:changemenu('Content')" target="menu">Contents</a> <a href="javascript:changemenu('User')" target="menu">Manage Users</a> <a href="javascript:changemenu('LogOff')" target="menu">Log Out</a></p>
 </body>
 </html>
