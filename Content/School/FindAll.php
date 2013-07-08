@@ -10,25 +10,49 @@ body {
 </style>
 </head>
 <body>
-<h1>Select a city id</h1>
+<h1>Select search criteria</h1>
 <p></p>
 <form method="GET" action="ListAll.php">    
 	<?php
-	 echo 'Select a city id';
+	$TableName =$_GET['Criteria'];
+	//echo $TableName.'<br>';
+	if($TableName=='city')
+	{
+	echo 'Select a city id/name <br>';
 	$dbc = mysqli_connect('localhost', 'LearningInSync', 'HackedMY1', 'learninginsync')
 		or die('Error connecting to MySQL server.');
-	$query = "Select * From city order by country_code, city_name";
+	$query = "Select * From $TableName order by country_code, $TableName"."_name";
+	//echo $query;
 	$result= mysqli_query($dbc, $query)
       or die ('Cannot find city.'); //on error display message
-	echo '<select name="city_name">';
+	echo '<select name="'.$TableName.'_name">';
 	 while ($row = mysqli_fetch_array($result)) {
-	echo '<option value="'.$row['city_name'].'"</option>';
-	echo $row['id'].' '. $row['city_name'];
+	echo '<option value="'.$row[$TableName.'_name'].'"</option>';
+	echo $row['id'].' '. $row[$TableName.'_name'];
 	}
-	 echo '</select>';
-	mysqli_close($dbc); 
+	 echo '</select><br>';
+	mysqli_close($dbc);
+	}
+	if($TableName=='District')
+	{
+	echo 'Select a district id/name <br>';
+	$dbc = mysqli_connect('localhost', 'LearningInSync', 'HackedMY1', 'learninginsync')
+		or die('Error connecting to MySQL server.');
+	$query = "Select * From $TableName order by country_code, $TableName"."_name";
+	//echo $query;
+	$result= mysqli_query($dbc, $query)
+      or die ('Cannot find district.'); //on error display message
+	echo '<select name="'.$TableName.'_name">';
+	 while ($row = mysqli_fetch_array($result)) {
+	echo '<option value="'.$row[$TableName.'_name'].'"</option>';
+	echo $row['id'].' '. $row[$TableName.'_name'];
+	}
+	 echo '</select><br>';
+	mysqli_close($dbc);
+	}
 	?>
 	<input type="submit" name="findschool" value="Show all schools" />
-  </form>
+	<input type="hidden" name="SubmittedTable" value="<?php echo "$TableName" ?>"/>
+	</form>
 </body>
 </html>

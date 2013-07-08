@@ -1,5 +1,5 @@
 #navigation {  width:150px; }
-#navigation ul { margin:0px; padding:0px; }
+#navigation ul { margin:5px; padding:0px; }
 #navigation li { list-style: none; } 
  
 ul.top-level { background:#666; }
@@ -11,7 +11,7 @@ ul.top-level li {
 }
  
 #navigation a {
-font-family:arial; 
+	font-family:arial; 
  color: #fff;
  cursor: pointer;
  display:block;

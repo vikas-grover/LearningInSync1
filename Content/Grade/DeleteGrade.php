@@ -32,7 +32,7 @@ body {
   $result = mysqli_query($dbc, $query);
   while ($row = mysqli_fetch_array($result)) {
     echo '<input type="checkbox" value="' . $row['id'] .'" name="todelete[]" />';
-	echo 'Grade ID: '. $row['id'] .', Grade Name: '. $row['name'];
+	echo 'Grade ID: '. $row['id'] .', Grade Name: '. $row['grade_name'];
 	
 	echo '<br />';
 	}// close the while

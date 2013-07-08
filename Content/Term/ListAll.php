@@ -22,7 +22,7 @@ body {
   $query = "SELECT * FROM term";
   $result = mysqli_query($dbc, $query);
   while ($row = mysqli_fetch_array($result)) {
-	echo 'ID: '. $row['id'] .' , Term_name: '. $row['Term_name'] ;
+	echo 'ID: '. $row['id'] .' , Term_name: '. $row['term_name'] ;
 	echo '<br />';
   }
   mysqli_close($dbc);

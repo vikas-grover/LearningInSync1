@@ -31,6 +31,10 @@ case 'Region':
  	parent.menu.location="../SideMenu/City.html";
 	parent.content.location="../Content/City/stat.php";
   break;  
+  case 'District':
+ 	parent.menu.location="../SideMenu/District.html";
+	parent.content.location="../Content/District/stat.php";
+  break;  
     case 'School':
  	parent.menu.location="../SideMenu/School.html";
 	parent.content.location="../Content/School/stat.php";
@@ -53,7 +57,7 @@ case 'Region':
   break;   
     case 'Report':
  	parent.menu.location="../SideMenu/Report.html";
-	parent.content.location="../Content/Report/stat.php";
+	parent.content.location="../Content/Report/NoSchoolCities.php";
   break;   
     case 'Content':
  	parent.menu.location="../SideMenu/Content.html";
@@ -77,9 +81,9 @@ case 'Region':
 </head>
 
 <body>
-<h3>Welcome to PHP MySQL, <?php echo $_SESSION['authenticated']; ?></h3>
+<h3>Welcome to LearningInSync, <?php echo $_SESSION['authenticated']; ?></h3>
 <p><a href="javascript:changemenu('Student')" target="menu">Students</a> <a href="javascript:changemenu('Teacher')" target="menu">Teachers</a>
- <a href="javascript:changemenu('Country')" target="menu">Countries</a> <a href="javascript:changemenu('City')" target="menu">Cities</a> <a href="javascript:changemenu('Region')" target="menu">Regions</a>
- <a href="javascript:changemenu('School')" target="menu">Schools</a> <a href="javascript:changemenu('Subject')" target="menu">Subjects</a> <a href="javascript:changemenu('Enrollment')" target="menu">Enrollments</a> <a href="javascript:changemenu('Grade')" target="menu">Grades</a> <a href="javascript:changemenu('Term')" target="menu">Terms</a> <a href="javascript:changemenu('Report')" target="menu">Reports</a> <a href="javascript:changemenu('Content')" target="menu">Contents</a> <a href="javascript:changemenu('User')" target="menu">Manage Users</a> <a href="javascript:changemenu('LogOff')" target="menu">Log Out</a></p>
+ <a href="javascript:changemenu('Country')" target="menu">Countries</a> <a href="javascript:changemenu('Region')" target="menu">Regions</a> <a href="javascript:changemenu('District')" target="menu">District</a> <a href="javascript:changemenu('City')" target="menu">Cities</a>
+ <a href="javascript:changemenu('School')" target="menu">Schools</a> <a href="javascript:changemenu('Grade')" target="menu">Form/Grade</a> <a href="javascript:changemenu('Subject')" target="menu">Subjects</a> <a href="javascript:changemenu('Term')" target="menu">Terms</a> <a href="javascript:changemenu('Enrollment')" target="menu">Enrollments</a> <a href="javascript:changemenu('Report')" target="menu">Reports</a> <a href="javascript:changemenu('Content')" target="menu">Contents</a> <a href="javascript:changemenu('User')" target="menu">Manage Users</a> <a href="javascript:changemenu('LogOff')" target="menu">Log Out</a></p>
 </body>
 </html>

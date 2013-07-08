@@ -1,28 +1,48 @@
 <html>
 <head>
 <title></title>
-<style type="text/css">
-body {
-	font-family:verdana,arial,sans-serif;
-	font-size:10pt;
-	margin:10px;
-	background-color:#ff9900;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="../CSS/SideMenu.css">
+<link rel="stylesheet" type="text/css" href="../CSS/SideBody.css">
 </head>
 <body>
 <h3>Grade Information</h3>
-<p><a href="../Content/Grade/Stat.php" target="content">Grade Statistics</a></p>
-<p><a href="../Content/Grade/ListAll.php" target="content">List all Grades</a></p>
-<p><a href="../Content/Grade/Add.php" target="content">Add a Grade</a></p>
-<p><a href="../Content/Grade/Delete.php" target="content">Delete a Grade</a></p>
-<p><a href="../Content/Grade/Edit.php" target="content">Edit a Grade</a></p>
-
-<h4>More Examples:</h4>
-<a href="http://www.quackit.com/html/templates/frames/frames_example_1.html" target="_top">Example 1</a><br />
-<a href="http://www.quackit.com/html/templates/frames/frames_example_2.html" target="_top">Example 2</a><br />
-<a href="http://www.quackit.com/html/templates/frames/frames_example_3.html" target="_top">Example 3</a><br />
-<a href="http://www.quackit.com/html/templates/frames/frames_example_4.html" target="_top">Example 4</a><br />
-<a href="http://www.quackit.com/html/templates/frames/frames_example_5.html" target="_top">Example 5</a><br />
+<div id="navigation">
+    <ul class="top-level">
+        <li><a href="../Content/Grade/Stat.php" target="content">Statistics</a>
+            <ul class="sub-level">
+                <li><a href="#">Grade</a>
+                </li>
+                <li><a href="#">Form</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#" >View Information</a>
+		 <ul class="sub-level">
+                <li><a href="../Content/Grade/ListAll.php?Criteria=ByGrade" target="content">By Grade</a>
+                </li>
+                <li><a href="../Content/Grade/ListAll.php?Criteria=ByForm" target="content">By Form</a>
+                </li>
+            </ul>
+		</li>
+        <li><a href="#">Add information</a>
+		<ul class="sub-level">
+                <li><a href="../Content/Grade/AddGrade.php" target="content">Add a grade</a>
+                </li>
+                <li><a href="../Content/Grade/AddForm.php" target="content">Add a form</a>
+                </li>
+        </ul>
+		</li>
+		  <li><a href="#">Edit information</a></li>
+        <li>
+            <a href="#">Delete information</a>
+		<ul class="sub-level">
+                <li><a href="../Content/Grade/DeleteGrade.php" target="content">Delete Grade</a>
+                </li>
+                <li><a href="../Content/Grade/DeleteForm.php" target="content">Delete Form</a>
+                </li>
+            </ul>	
+        </li>
+    </ul>
+</div>
 </body>
 </html>

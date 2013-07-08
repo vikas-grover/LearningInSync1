@@ -30,13 +30,13 @@ body {
     or die('Error connecting to MySQL server.');
 
   // If all values were properly input, insert new country
-  $query = "Select en.sid as SID,st.first_name as FNAME,st.last_name as LNAME,en.scid as SCHOOLID,sc.school_name as SCHOOLNAME,en.gid as GRADEID,gr.name as GRADENAME,en.tid as TERMID,te.Term_name as TERMNAME,en.subid as SUBJECTID,su.subject_name as SUBJECTNAME, en.score as SCORE From student st, school sc,grade gr,term te,subject su,enrollment en 
-  Where en.scid ='$school_id' AND
-  en.sid = st.id AND
-  en.scid = sc.id AND
-  en.tid = te.id AND
-  en.gid = gr.id AND
-  en.subid = su.subject_code";
+  $query = "Select en.student_id as SID,st.first_name as FNAME,st.last_name as LNAME,en.school_id as SCHOOLID,sc.school_name as SCHOOLNAME,en.grade_id as GRADEID,gr.grade_name as GRADENAME,en.term_id as TERMID,te.Term_name as TERMNAME,en.subject_code as SUBJECTID,su.subject_name as SUBJECTNAME, en.score as SCORE From student st, school sc,grade gr,term te,subject su,enrollment en 
+  Where en.school_id ='$school_id' AND
+  en.student_id = st.id AND
+  en.school_id = sc.id AND
+  en.term_id = te.id AND
+  en.grade_id = gr.id AND
+  en.subject_code = su.subject_code";
 
 	$result= mysqli_query($dbc, $query)
       or die ('Cannot find any enrollment.'); //on error display message
